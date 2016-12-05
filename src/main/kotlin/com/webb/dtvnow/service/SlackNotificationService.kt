@@ -10,6 +10,6 @@ open class SlackNotificationService
     @Autowired constructor(@Value("\${notify.slack.channel}") val slackChannel: String) : NotificationService {
     
     override fun notify(msg: String) {
-        Runtime.getRuntime().exec(arrayOf("slack", slackChannel, msg))
+        Runtime.getRuntime().exec(arrayOf("/usr/local/bin/slack", slackChannel, msg))
     }
 }
