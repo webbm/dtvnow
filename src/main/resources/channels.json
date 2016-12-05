@@ -1,0 +1,37 @@
+[
+  {
+    "name"    : "DisneyJunior",
+    "url"     : "https://api.auth.adobe.com/api/v1/config/DisneyJunior?format=json",
+    "present" : false
+  },
+  {
+    "name"    : "HGTV",
+    "url"     : "https://api.auth.adobe.com/api/v1/config/HGTV.json",
+    "present" : false
+  },
+  {
+    "name"    : "TNT",
+    "url"     : "https://api.auth.adobe.com/api/v1/config/TNT.json",
+    "present" : false
+  },
+  {
+    "name"    : "TBS",
+    "url"     : "https://api.auth.adobe.com/api/v1/config/TBS.json",
+    "present" : false
+  },
+  {
+    "name"    : "FX",
+    "url"     : "https://sp.auth.adobe.com/adobe-services/config/fx?noflash=true",
+    "present" : false
+  },
+  {
+    "name"    : "AMC",
+    "url"     : "https://api.auth.adobe.com/api/v1/config/AMC.json",
+    "present" : false
+  },
+  {
+    "name"    : "FOX Sports GO",
+    "url"     : "https://fsg.bamcontent.com/epg-files/mvpd/mvpd_data.json",
+    "present" : false
+  }
+]
