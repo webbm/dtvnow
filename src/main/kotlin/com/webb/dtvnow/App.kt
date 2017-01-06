@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.CommandLineRunner
 import org.springframework.stereotype.Component
 import java.io.File
-import java.net.URL
 import java.util.regex.Pattern
 
 @Component
@@ -28,8 +27,6 @@ open class App
     
     override fun run(vararg p0: String?) {
 
-        println("File Path: ${dataFile.toURI().path}. Can Write: ${dataFile.canWrite()}")
-        
         val total = channelList.size
         
         val alreadyUpdated = channelList.filter { it.present }.toSet()
@@ -52,7 +49,7 @@ open class App
             
             val newChannels = newlyUpdated.filter(Channel::present).map { it.name }
             
-            val names = if (newChannels.size == 0) null else newChannels.reduce { left, right -> "$left, $right" }
+            val names = if (newChannels.isEmpty()) null else newChannels.reduce { left, right -> "$left, $right" }
             
             if (names is String) {
                 notificationService.notify("$names now supports DirecTV NOW as a sign-in provider.")
@@ -73,7 +70,6 @@ open class App
         else {
             notificationService.notify("All channels now support DirecTV NOW as a provider!")
         }
-        
     }
     
     fun supportsDirecTVNow(data: String) : Boolean {
